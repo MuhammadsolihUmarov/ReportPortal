@@ -1,6 +1,6 @@
 import { User } from '../business/models/user.model';
 
-export const users = {
+export const credentials = {
     validUser: {
         username: 'default',
         password: '1q2w3e'

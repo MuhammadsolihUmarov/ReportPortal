@@ -1,9 +1,9 @@
 import { test } from '../core/fixtures';
-import { users } from '../test-data/users';
+import { credentials } from '../test-data/credentials';
 
 test.describe('Dashboard page', () => {
     test.beforeEach(async ({ page, loginFlow, sidebarPage }) => {
-        await loginFlow.loginAs(users.validUser);
+        await loginFlow.loginAs(credentials.validUser);
         await sidebarPage.openDashboards();
     });
 

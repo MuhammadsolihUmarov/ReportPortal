@@ -1,9 +1,9 @@
 import { test, expect } from '../core/fixtures';
-import { users } from '../test-data/users';
+import { credentials } from '../test-data/credentials';
 
 test.describe('Sidebar Page', () => {
     test.beforeEach(async ({ loginFlow }) => {
-        await loginFlow.loginAs(users.validUser);
+        await loginFlow.loginAs(credentials.validUser);
     });
 
     test('should navigate to Dashboards page', async ({ page, sidebarPage }) => {
