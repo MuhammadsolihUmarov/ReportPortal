@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+import RPconfig from "./core/config/report-portal.config";
 
 export default defineConfig({
     use: {
@@ -13,6 +14,9 @@ export default defineConfig({
             maxDiffPixelRatio: 0.02
         },
     },
-    reporter: [['html', { open: 'never' }]],
+    reporter: [
+        ['html', { open: 'never' }],
+        ['@reportportal/agent-js-playwright', RPconfig],
+    ],
     workers: undefined
 });
